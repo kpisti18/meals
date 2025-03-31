@@ -1,0 +1,74 @@
+/* előkészületek */
+:root {
+    --background: #F8F9FA;
+    --shadow-direction: 0 0 10px;
+    --shadow-color: rgb(0,0,0,0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* a dokumentum formázása */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+}
+
+body > div {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+}
+
+header img {
+    width: 70px;
+}
+
+header > div div {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header > button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: ease 0.5s;
+}
+
+header > button:hover {
+    transform: scale(1.1);
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+header + div {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

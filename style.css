@@ -2,7 +2,7 @@
 :root {
     --background: #F8F9FA;
     --shadow-direction: 0 0 10px;
-    --shadow-color: rgb(0,0,0,0.5);
+    --shadow-color: rgb(0, 0, 0, 0.5);
 }
 
 * {
@@ -21,7 +21,7 @@ body {
     background-color: var(--background);
 }
 
-body > div {
+body>div {
     max-width: 1200px;
     margin: 1.5rem auto;
 }
@@ -31,7 +31,7 @@ header {
     justify-content: space-between;
 }
 
-header > div {
+header>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +43,12 @@ header img {
     width: 70px;
 }
 
-header > div div {
+header>div div {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-header > button {
+header>button {
     background-color: red;
     color: white;
     padding: 10px 20px;
@@ -59,7 +59,7 @@ header > button {
     transition: ease 0.5s;
 }
 
-header > button:hover {
+header>button:hover {
     transform: scale(1.1);
 }
 
@@ -67,8 +67,32 @@ hr {
     margin: 1rem 0;
 }
 
-header + div {
+header+hr+div {
     display: grid;
     gap: 1.2rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+header+hr+div>div {
+    background-color: whitesmoke;
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-direction) var(--shadow-color);
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+header+hr+div>div:hover {
+    transform: scale(1.01);
+}
+
+header+hr+div img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+header+hr+div h5 {
+    margin-top: 1rem;
 }
